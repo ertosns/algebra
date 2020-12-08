@@ -1,0 +1,508 @@
+\hypertarget{namespaceAlgebra}{}\doxysection{Algebra Namespace Reference}
+\label{namespaceAlgebra}\index{Algebra@{Algebra}}
+
+
+Is Linear \mbox{\hyperlink{namespaceAlgebra}{Algebra}} library of required mathematics for, Kinetics, and Kinematics mechanics.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{namespaceAlgebra_a1ea948e34dd9b919a55e3fa186ee4456}{Epsilon}} (const double val)
+\begin{DoxyCompactList}\small\item\em Find if the value is negligible, or close to zero. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix3d \mbox{\hyperlink{namespaceAlgebra_a7d13e726ac9eccc7ca93d9aef37d1e43}{Vec\+Toso3}} (const Eigen\+::\+Vector3d \&omg)
+\begin{DoxyCompactList}\small\item\em Get the skew symmetric matrix representation of a vector $v=\begin{vmatrix}v_1&v_2&v_3\end{vmatrix}$ $skew(v)=\begin{vmatrix}0&-v_3&v_2\\v_3&0&1v_1\\-v_2&v_1&0\end{vmatrix}$. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{namespaceAlgebra_a24b774a7cebece411c6e128bf5dbbc22}{so3\+To\+Vec}} (const Eigen\+::\+Matrix\+Xd \&so3mat)
+\begin{DoxyCompactList}\small\item\em Returns vector represented by the skew symmetric matrix. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{namespaceAlgebra_a092a9ff641b2ef4f6177d9749db1bbd8}{Rp\+To\+Trans}} (const Eigen\+::\+Matrix3d \&R, const Eigen\+::\+Vector3d \&p)
+\begin{DoxyCompactList}\small\item\em Combines a rotation matrix and position vector into a single Special Euclidian Group (S\+E3) homogeneous transformation matrix. \end{DoxyCompactList}\item 
+std\+::vector$<$ Eigen\+::\+Matrix\+Xd $>$ \mbox{\hyperlink{namespaceAlgebra_a74e73ccbcb3e5b473054eb47ae74220b}{Trans\+To\+Rp}} (const Eigen\+::\+Matrix\+Xd \&T)
+\begin{DoxyCompactList}\small\item\em Separates the rotation matrix and position vector from the transfomation matrix representation. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{namespaceAlgebra_a933fa79752a7ffba2bb04867ba367e74}{Vec\+Tose3}} (const Eigen\+::\+Vector\+Xd \&V)
+\begin{DoxyCompactList}\small\item\em Translates a spatial velocity vector into a transformation matrix. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{namespaceAlgebra_afec0883ab58c75e9a8762c3431218d71}{se3\+To\+Vec}} (const Eigen\+::\+Matrix\+Xd \&T)
+\begin{DoxyCompactList}\small\item\em Translates a transformation matrix into a spatial velocity vector. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{namespaceAlgebra_a129acb4989010b2ac9b9a8c981d0360b}{Normalize}} (Eigen\+::\+Matrix\+Xd V)
+\begin{DoxyCompactList}\small\item\em Returns a normalized version of the input vector. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector4d \mbox{\hyperlink{namespaceAlgebra_af38d42521fdb2d9d82d792e798eeea89}{Axis\+Ang3}} (const Eigen\+::\+Vector3d \&expc3)
+\item 
+Eigen\+::\+Matrix3d \mbox{\hyperlink{namespaceAlgebra_aa27c1437615dd5c5b831a175636bbbc8}{Matrix\+Exp3}} (const Eigen\+::\+Matrix3d \&so3mat)
+\begin{DoxyCompactList}\small\item\em Translates an exponential rotation into a rotation matrix using rodrigues formula. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix3d \mbox{\hyperlink{namespaceAlgebra_a78457405bdd5f9f56b1ae5b3c3e23db7}{Matrix\+Log3}} (const Eigen\+::\+Matrix3d \&R)
+\begin{DoxyCompactList}\small\item\em Function\+: Computes the matrix logarithm of a rotation matrix. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{namespaceAlgebra_a5da027e937bc6a082ad206eb9889e826}{Adjoint}} (const Eigen\+::\+Matrix\+Xd \&T)
+\begin{DoxyCompactList}\small\item\em Provides the adjoint representation of a transformation matrix Used to change the frame of reference for spatial velocity vectors. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{namespaceAlgebra_a43c31fe8604c05c5a8fa0bfa51ddab4e}{Matrix\+Exp6}} (const Eigen\+::\+Matrix\+Xd \&se3mat)
+\begin{DoxyCompactList}\small\item\em Rotation expanded for screw axis. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{namespaceAlgebra_a0a89e8ca319960bd317a40da457266cf}{Matrix\+Log6}} (const Eigen\+::\+Matrix\+Xd \&T)
+\begin{DoxyCompactList}\small\item\em Computes the matrix logarithm of a homogeneous transformation matrix. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{namespaceAlgebra_a0ac2e7b69a25db797f510899ffd72dec}{Trans\+Inv}} (const Eigen\+::\+Matrix\+Xd \&transform)
+\begin{DoxyCompactList}\small\item\em Inverts a homogeneous transformation matrix. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{namespaceAlgebra_a2b319cd2a837710f808bd0ae8e908806}{Rot\+Inv}} (const Eigen\+::\+Matrix\+Xd \&rot\+Matrix)
+\begin{DoxyCompactList}\small\item\em Inverts a rotation matrix. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{namespaceAlgebra_ac1d1edd08f67767004fa1333a6732108}{Screw\+To\+Axis}} (Eigen\+::\+Vector3d q, Eigen\+::\+Vector3d s, double h)
+\begin{DoxyCompactList}\small\item\em Takes a parametric description of a screw axis and converts it to a normalized screw axis. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{namespaceAlgebra_a7549c580440aa3bf7c4e6fa0b86ffef7}{Axis\+Ang6}} (const Eigen\+::\+Vector\+Xd \&expc6)
+\begin{DoxyCompactList}\small\item\em Converts a 6-\/vector of exponential coordinates into screw axis-\/angle form. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{namespaceAlgebra_ad0315db5821366e5dea37cb7c4341e13}{Project\+To\+S\+O3}} (const Eigen\+::\+Matrix\+Xd \&M)
+\begin{DoxyCompactList}\small\item\em Returns a projection of mat into S\+O(3) \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{namespaceAlgebra_a8eeb2650b9d5a5cf9c64acdc170e5cd2}{Project\+To\+S\+E3}} (const Eigen\+::\+Matrix\+Xd \&M)
+\begin{DoxyCompactList}\small\item\em Returns a projection of mat into S\+E(3) \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{namespaceAlgebra_a1f902cb4b3aefc31a2f947114bdb6ec3}{Distance\+To\+S\+O3}} (const Eigen\+::\+Matrix3d \&M)
+\begin{DoxyCompactList}\small\item\em Returns the Frobenius norm to describe the distance of mat from the S\+O(3) manifold. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{namespaceAlgebra_ae06a676bcdf495f79929289943c54a15}{Distance\+To\+S\+E3}} (const Eigen\+::\+Matrix4d \&T)
+\begin{DoxyCompactList}\small\item\em Returns the Frobenius norm to describe the distance of mat from the S\+E(3) manifold. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespaceAlgebra_a7aba05b324d04d09bd93e4b0c1527578}{Test\+If\+S\+O3}} (const Eigen\+::\+Matrix3d \&M)
+\item 
+bool \mbox{\hyperlink{namespaceAlgebra_a897aa672c95ca78bd9d5629590792c9a}{Test\+If\+S\+E3}} (const Eigen\+::\+Matrix4d \&T)
+\item 
+Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{namespaceAlgebra_a1cc951ff2083347fbd3dbeaf478ce251}{ad}} (Eigen\+::\+Vector\+Xd V)
+\begin{DoxyCompactList}\small\item\em Calculate the 6x6 matrix of the given 6-\/vector V. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Is Linear \mbox{\hyperlink{namespaceAlgebra}{Algebra}} library of required mathematics for, Kinetics, and Kinematics mechanics. 
+
+Build on top of Kevin M. Lynch\textquotesingle{}s, and Frank C. Park \textquotesingle{}Modern Robotics\textquotesingle{} Book \href{http://hades.mech.northwestern.edu/index.php/Modern_Robotics,}{\texttt{ http\+://hades.\+mech.\+northwestern.\+edu/index.\+php/\+Modern\+\_\+\+Robotics,}} and courses from Princeton. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespaceAlgebra_a1cc951ff2083347fbd3dbeaf478ce251}\label{namespaceAlgebra_a1cc951ff2083347fbd3dbeaf478ce251}} 
+\index{Algebra@{Algebra}!ad@{ad}}
+\index{ad@{ad}!Algebra@{Algebra}}
+\doxysubsubsection{\texorpdfstring{ad()}{ad()}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix\+Xd Algebra\+::ad (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector\+Xd}]{V }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calculate the 6x6 matrix of the given 6-\/vector V. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em V} & Eigen\+::\+Vector\+Xd (6x1), V=\mbox{[}omg, v\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Eigen\+::\+Matrix\+Xd (6x6) Note\+: Can be used to calculate the Lie bracket \mbox{[}V1, V2\mbox{]} = \mbox{[}ad\+V1\mbox{]}V2 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceAlgebra_a5da027e937bc6a082ad206eb9889e826}\label{namespaceAlgebra_a5da027e937bc6a082ad206eb9889e826}} 
+\index{Algebra@{Algebra}!Adjoint@{Adjoint}}
+\index{Adjoint@{Adjoint}!Algebra@{Algebra}}
+\doxysubsubsection{\texorpdfstring{Adjoint()}{Adjoint()}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix\+Xd Algebra\+::\+Adjoint (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Matrix\+Xd \&}]{T }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Provides the adjoint representation of a transformation matrix Used to change the frame of reference for spatial velocity vectors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em T} & 4x4 Transformation matrix S\+E(3) $\begin{vmatrix}R&p\\0&1\end{vmatrix}$. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+6x6 Adjoint Representation of the matrix T $adj(T)=\begin{vmatrix}R&0 \\ [p]R&R\end{vmatrix}$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceAlgebra_af38d42521fdb2d9d82d792e798eeea89}\label{namespaceAlgebra_af38d42521fdb2d9d82d792e798eeea89}} 
+\index{Algebra@{Algebra}!AxisAng3@{AxisAng3}}
+\index{AxisAng3@{AxisAng3}!Algebra@{Algebra}}
+\doxysubsubsection{\texorpdfstring{AxisAng3()}{AxisAng3()}}
+{\footnotesize\ttfamily Eigen\+::\+Vector4d Algebra\+::\+Axis\+Ang3 (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector3d \&}]{expc3 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespaceAlgebra_a7549c580440aa3bf7c4e6fa0b86ffef7}\label{namespaceAlgebra_a7549c580440aa3bf7c4e6fa0b86ffef7}} 
+\index{Algebra@{Algebra}!AxisAng6@{AxisAng6}}
+\index{AxisAng6@{AxisAng6}!Algebra@{Algebra}}
+\doxysubsubsection{\texorpdfstring{AxisAng6()}{AxisAng6()}}
+{\footnotesize\ttfamily Eigen\+::\+Vector\+Xd Algebra\+::\+Axis\+Ang6 (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector\+Xd \&}]{expc6 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Converts a 6-\/vector of exponential coordinates into screw axis-\/angle form. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em expc6} & A 6-\/vector of exponential coordinates for rigid-\/body motion S$\ast$theta \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S The corresponding normalized screw axis 
+
+theta The distance traveled along/about S 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceAlgebra_ae06a676bcdf495f79929289943c54a15}\label{namespaceAlgebra_ae06a676bcdf495f79929289943c54a15}} 
+\index{Algebra@{Algebra}!DistanceToSE3@{DistanceToSE3}}
+\index{DistanceToSE3@{DistanceToSE3}!Algebra@{Algebra}}
+\doxysubsubsection{\texorpdfstring{DistanceToSE3()}{DistanceToSE3()}}
+{\footnotesize\ttfamily double Algebra\+::\+Distance\+To\+S\+E3 (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Matrix4d \&}]{T }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the Frobenius norm to describe the distance of mat from the S\+E(3) manifold. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mat} & A 4x4 matrix \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A quantity describing the distance of mat from the S\+E(3) manifold Computes the distance from mat to the S\+E(3) manifold using the following method\+: Compute the determinant of matR, the top 3x3 submatrix of mat. If det(mat\+R) $<$= 0, return a large number. If det(mat\+R) $>$ 0, replace the top 3x3 submatrix of mat with mat\+R$^\wedge$T.matR, and set the first three entries of the fourth column of mat to zero. Then return norm(mat -\/ I). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceAlgebra_a1f902cb4b3aefc31a2f947114bdb6ec3}\label{namespaceAlgebra_a1f902cb4b3aefc31a2f947114bdb6ec3}} 
+\index{Algebra@{Algebra}!DistanceToSO3@{DistanceToSO3}}
+\index{DistanceToSO3@{DistanceToSO3}!Algebra@{Algebra}}
+\doxysubsubsection{\texorpdfstring{DistanceToSO3()}{DistanceToSO3()}}
+{\footnotesize\ttfamily double Algebra\+::\+Distance\+To\+S\+O3 (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Matrix3d \&}]{M }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the Frobenius norm to describe the distance of mat from the S\+O(3) manifold. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em M} & A 3x3 matrix \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A quantity describing the distance of mat from the S\+O(3) manifold Computes the distance from mat to the S\+O(3) manifold using the following method\+: If det(mat) $<$= 0, return a large number. If det(mat) $>$ 0, return norm(mat$^\wedge$T.mat -\/ I). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceAlgebra_a1ea948e34dd9b919a55e3fa186ee4456}\label{namespaceAlgebra_a1ea948e34dd9b919a55e3fa186ee4456}} 
+\index{Algebra@{Algebra}!Epsilon@{Epsilon}}
+\index{Epsilon@{Epsilon}!Algebra@{Algebra}}
+\doxysubsubsection{\texorpdfstring{Epsilon()}{Epsilon()}}
+{\footnotesize\ttfamily bool Algebra\+::\+Epsilon (\begin{DoxyParamCaption}\item[{const double}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Find if the value is negligible, or close to zero. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & double value to be checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Boolean of true-\/ignore or false-\/can\textquotesingle{}t ignore. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceAlgebra_aa27c1437615dd5c5b831a175636bbbc8}\label{namespaceAlgebra_aa27c1437615dd5c5b831a175636bbbc8}} 
+\index{Algebra@{Algebra}!MatrixExp3@{MatrixExp3}}
+\index{MatrixExp3@{MatrixExp3}!Algebra@{Algebra}}
+\doxysubsubsection{\texorpdfstring{MatrixExp3()}{MatrixExp3()}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix3d Algebra\+::\+Matrix\+Exp3 (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Matrix3d \&}]{so3mat }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Translates an exponential rotation into a rotation matrix using rodrigues formula. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em so3mat} & exponenential representation of a rotation in so3 $[w]\theta$. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Rotation matrix $e^{[w]\theta}$. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceAlgebra_a43c31fe8604c05c5a8fa0bfa51ddab4e}\label{namespaceAlgebra_a43c31fe8604c05c5a8fa0bfa51ddab4e}} 
+\index{Algebra@{Algebra}!MatrixExp6@{MatrixExp6}}
+\index{MatrixExp6@{MatrixExp6}!Algebra@{Algebra}}
+\doxysubsubsection{\texorpdfstring{MatrixExp6()}{MatrixExp6()}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix\+Xd Algebra\+::\+Matrix\+Exp6 (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Matrix\+Xd \&}]{se3mat }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Rotation expanded for screw axis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em se3mat} & se3 matrix representation of exponential coordinates $[s]\theta$ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+6x6 Matrix exponential Transformation $T=e^{[s]\theta}$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceAlgebra_a78457405bdd5f9f56b1ae5b3c3e23db7}\label{namespaceAlgebra_a78457405bdd5f9f56b1ae5b3c3e23db7}} 
+\index{Algebra@{Algebra}!MatrixLog3@{MatrixLog3}}
+\index{MatrixLog3@{MatrixLog3}!Algebra@{Algebra}}
+\doxysubsubsection{\texorpdfstring{MatrixLog3()}{MatrixLog3()}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix3d Algebra\+::\+Matrix\+Log3 (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Matrix3d \&}]{R }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function\+: Computes the matrix logarithm of a rotation matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em R} & Rotation matrix $[w]\theta$. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+matrix logarithm of a rotation $e^{[w]\theta}$. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceAlgebra_a0a89e8ca319960bd317a40da457266cf}\label{namespaceAlgebra_a0a89e8ca319960bd317a40da457266cf}} 
+\index{Algebra@{Algebra}!MatrixLog6@{MatrixLog6}}
+\index{MatrixLog6@{MatrixLog6}!Algebra@{Algebra}}
+\doxysubsubsection{\texorpdfstring{MatrixLog6()}{MatrixLog6()}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix\+Xd Algebra\+::\+Matrix\+Log6 (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Matrix\+Xd \&}]{T }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Computes the matrix logarithm of a homogeneous transformation matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em T} & A matrix in S\+E3. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The matrix logarithm of $e^{[s]\theta}$. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceAlgebra_a129acb4989010b2ac9b9a8c981d0360b}\label{namespaceAlgebra_a129acb4989010b2ac9b9a8c981d0360b}} 
+\index{Algebra@{Algebra}!Normalize@{Normalize}}
+\index{Normalize@{Normalize}!Algebra@{Algebra}}
+\doxysubsubsection{\texorpdfstring{Normalize()}{Normalize()}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix\+Xd Algebra\+::\+Normalize (\begin{DoxyParamCaption}\item[{Eigen\+::\+Matrix\+Xd}]{V }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a normalized version of the input vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em V} & Eigen\+::\+Matrix\+Xd \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Eigen\+::\+Matrix\+Xd normalized V Note\+: Matrix\+Xd is used instead of Vector\+Xd for the case of row vectors Requires a copy Useful because of the Matrix\+Xd casting 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceAlgebra_a8eeb2650b9d5a5cf9c64acdc170e5cd2}\label{namespaceAlgebra_a8eeb2650b9d5a5cf9c64acdc170e5cd2}} 
+\index{Algebra@{Algebra}!ProjectToSE3@{ProjectToSE3}}
+\index{ProjectToSE3@{ProjectToSE3}!Algebra@{Algebra}}
+\doxysubsubsection{\texorpdfstring{ProjectToSE3()}{ProjectToSE3()}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix\+Xd Algebra\+::\+Project\+To\+S\+E3 (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Matrix\+Xd \&}]{M }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a projection of mat into S\+E(3) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em M} & A 4x4 matrix to project to S\+E(3) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The closest matrix to T that is in S\+E(3) Projects a matrix mat to the closest matrix in S\+E(3) using singular-\/value decomposition (see \href{http://hades.mech.northwestern.edu/index.php/Modern_Robotics_Linear_Algebra_Review}{\texttt{ http\+://hades.\+mech.\+northwestern.\+edu/index.\+php/\+Modern\+\_\+\+Robotics\+\_\+\+Linear\+\_\+\+Algebra\+\_\+\+Review}}). This function is only appropriate for matrices close to S\+E(3). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceAlgebra_ad0315db5821366e5dea37cb7c4341e13}\label{namespaceAlgebra_ad0315db5821366e5dea37cb7c4341e13}} 
+\index{Algebra@{Algebra}!ProjectToSO3@{ProjectToSO3}}
+\index{ProjectToSO3@{ProjectToSO3}!Algebra@{Algebra}}
+\doxysubsubsection{\texorpdfstring{ProjectToSO3()}{ProjectToSO3()}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix\+Xd Algebra\+::\+Project\+To\+S\+O3 (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Matrix\+Xd \&}]{M }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a projection of mat into S\+O(3) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em M} & A matrix near S\+O(3) to project to S\+O(3) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The closest matrix to R that is in S\+O(3) Projects a matrix mat to the closest matrix in S\+O(3) using singular-\/value decomposition (see \href{http://hades.mech.northwestern.edu/index.php/Modern_Robotics_Linear_Algebra_Review}{\texttt{ http\+://hades.\+mech.\+northwestern.\+edu/index.\+php/\+Modern\+\_\+\+Robotics\+\_\+\+Linear\+\_\+\+Algebra\+\_\+\+Review}}). This function is only appropriate for matrices close to S\+O(3). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceAlgebra_a2b319cd2a837710f808bd0ae8e908806}\label{namespaceAlgebra_a2b319cd2a837710f808bd0ae8e908806}} 
+\index{Algebra@{Algebra}!RotInv@{RotInv}}
+\index{RotInv@{RotInv}!Algebra@{Algebra}}
+\doxysubsubsection{\texorpdfstring{RotInv()}{RotInv()}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix\+Xd Algebra\+::\+Rot\+Inv (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Matrix\+Xd \&}]{rot\+Matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inverts a rotation matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em R} & A rotation matrix \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: The inverse of R 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceAlgebra_a092a9ff641b2ef4f6177d9749db1bbd8}\label{namespaceAlgebra_a092a9ff641b2ef4f6177d9749db1bbd8}} 
+\index{Algebra@{Algebra}!RpToTrans@{RpToTrans}}
+\index{RpToTrans@{RpToTrans}!Algebra@{Algebra}}
+\doxysubsubsection{\texorpdfstring{RpToTrans()}{RpToTrans()}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix\+Xd Algebra\+::\+Rp\+To\+Trans (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Matrix3d \&}]{R,  }\item[{const Eigen\+::\+Vector3d \&}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Combines a rotation matrix and position vector into a single Special Euclidian Group (S\+E3) homogeneous transformation matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em R} & Rotation Matrix \\
+\hline
+{\em p} & Position Vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{namespaceAlgebra_a74e73ccbcb3e5b473054eb47ae74220b}{Trans\+To\+Rp}} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+Transformation Matrix $\begin{vmatrix}R&p\\0&1\end{vmatrix}$. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceAlgebra_ac1d1edd08f67767004fa1333a6732108}\label{namespaceAlgebra_ac1d1edd08f67767004fa1333a6732108}} 
+\index{Algebra@{Algebra}!ScrewToAxis@{ScrewToAxis}}
+\index{ScrewToAxis@{ScrewToAxis}!Algebra@{Algebra}}
+\doxysubsubsection{\texorpdfstring{ScrewToAxis()}{ScrewToAxis()}}
+{\footnotesize\ttfamily Eigen\+::\+Vector\+Xd Algebra\+::\+Screw\+To\+Axis (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector3d}]{q,  }\item[{Eigen\+::\+Vector3d}]{s,  }\item[{double}]{h }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Takes a parametric description of a screw axis and converts it to a normalized screw axis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em q} & A point lying on the screw axis \\
+\hline
+{\em s} & A unit vector in the direction of the screw axis \\
+\hline
+{\em h} & The pitch of the screw axis \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A normalized screw axis described by the inputs 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceAlgebra_afec0883ab58c75e9a8762c3431218d71}\label{namespaceAlgebra_afec0883ab58c75e9a8762c3431218d71}} 
+\index{Algebra@{Algebra}!se3ToVec@{se3ToVec}}
+\index{se3ToVec@{se3ToVec}!Algebra@{Algebra}}
+\doxysubsubsection{\texorpdfstring{se3ToVec()}{se3ToVec()}}
+{\footnotesize\ttfamily Eigen\+::\+Vector\+Xd Algebra\+::se3\+To\+Vec (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Matrix\+Xd \&}]{T }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Translates a transformation matrix into a spatial velocity vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em T} & Transformation matrix $\begin{vmatrix}[w]&v\\0&0\end{vmatrix}$ \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{namespaceAlgebra_a933fa79752a7ffba2bb04867ba367e74}{Vec\+Tose3}} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+Spatial velocity vector $\begin{vmatrix}w\\v\end{vmatrix}$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceAlgebra_a24b774a7cebece411c6e128bf5dbbc22}\label{namespaceAlgebra_a24b774a7cebece411c6e128bf5dbbc22}} 
+\index{Algebra@{Algebra}!so3ToVec@{so3ToVec}}
+\index{so3ToVec@{so3ToVec}!Algebra@{Algebra}}
+\doxysubsubsection{\texorpdfstring{so3ToVec()}{so3ToVec()}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3d Algebra\+::so3\+To\+Vec (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Matrix\+Xd \&}]{so3mat }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns vector represented by the skew symmetric matrix. 
+
+$v=\begin{vmatrix}v_1&v_2&v_3\end{vmatrix}$ $skew(v)=\begin{vmatrix}0&-v_3&v_2\\v_3&0&1v_1\\-v_2&v_1&0\end{vmatrix}$ 
+\begin{DoxyParams}{Parameters}
+{\em so3mat} & Eigen\+::\+Matrix\+Xd 3x3 skew symmetric matrix in so3 \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{namespaceAlgebra_a7d13e726ac9eccc7ca93d9aef37d1e43}{Vec\+Toso3}} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+v\+\_\+ret Eigen\+::\+Vector3d 3x1 vector 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceAlgebra_a897aa672c95ca78bd9d5629590792c9a}\label{namespaceAlgebra_a897aa672c95ca78bd9d5629590792c9a}} 
+\index{Algebra@{Algebra}!TestIfSE3@{TestIfSE3}}
+\index{TestIfSE3@{TestIfSE3}!Algebra@{Algebra}}
+\doxysubsubsection{\texorpdfstring{TestIfSE3()}{TestIfSE3()}}
+{\footnotesize\ttfamily bool Algebra\+::\+Test\+If\+S\+E3 (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Matrix4d \&}]{T }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespaceAlgebra_a7aba05b324d04d09bd93e4b0c1527578}\label{namespaceAlgebra_a7aba05b324d04d09bd93e4b0c1527578}} 
+\index{Algebra@{Algebra}!TestIfSO3@{TestIfSO3}}
+\index{TestIfSO3@{TestIfSO3}!Algebra@{Algebra}}
+\doxysubsubsection{\texorpdfstring{TestIfSO3()}{TestIfSO3()}}
+{\footnotesize\ttfamily bool Algebra\+::\+Test\+If\+S\+O3 (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Matrix3d \&}]{M }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespaceAlgebra_a0ac2e7b69a25db797f510899ffd72dec}\label{namespaceAlgebra_a0ac2e7b69a25db797f510899ffd72dec}} 
+\index{Algebra@{Algebra}!TransInv@{TransInv}}
+\index{TransInv@{TransInv}!Algebra@{Algebra}}
+\doxysubsubsection{\texorpdfstring{TransInv()}{TransInv()}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix\+Xd Algebra\+::\+Trans\+Inv (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Matrix\+Xd \&}]{transform }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inverts a homogeneous transformation matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em T} & A homogeneous transformation matrix \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The inverse of T Uses the structure of transformation matrices to avoid taking a matrix inverse, for efficiency. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceAlgebra_a74e73ccbcb3e5b473054eb47ae74220b}\label{namespaceAlgebra_a74e73ccbcb3e5b473054eb47ae74220b}} 
+\index{Algebra@{Algebra}!TransToRp@{TransToRp}}
+\index{TransToRp@{TransToRp}!Algebra@{Algebra}}
+\doxysubsubsection{\texorpdfstring{TransToRp()}{TransToRp()}}
+{\footnotesize\ttfamily std\+::vector$<$Eigen\+::\+Matrix\+Xd$>$ Algebra\+::\+Trans\+To\+Rp (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Matrix\+Xd \&}]{T }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Separates the rotation matrix and position vector from the transfomation matrix representation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em T} & Homogeneous transformation matrix $\begin{vmatrix}R&p\\0&1\end{vmatrix}$. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{namespaceAlgebra_a092a9ff641b2ef4f6177d9749db1bbd8}{Rp\+To\+Trans}} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+Rp\+\_\+ret std\+::vector of rotation matrix (R), and position vector (p). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceAlgebra_a933fa79752a7ffba2bb04867ba367e74}\label{namespaceAlgebra_a933fa79752a7ffba2bb04867ba367e74}} 
+\index{Algebra@{Algebra}!VecTose3@{VecTose3}}
+\index{VecTose3@{VecTose3}!Algebra@{Algebra}}
+\doxysubsubsection{\texorpdfstring{VecTose3()}{VecTose3()}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix\+Xd Algebra\+::\+Vec\+Tose3 (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector\+Xd \&}]{V }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Translates a spatial velocity vector into a transformation matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em V} & Spatial velocity vector $\begin{vmatrix}w\\v\end{vmatrix}$ \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{namespaceAlgebra_afec0883ab58c75e9a8762c3431218d71}{se3\+To\+Vec}} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+linear representation of Twist in special Euclidian group se3 $\begin{vmatrix}[w]&v\\0&0\end{vmatrix}$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceAlgebra_a7d13e726ac9eccc7ca93d9aef37d1e43}\label{namespaceAlgebra_a7d13e726ac9eccc7ca93d9aef37d1e43}} 
+\index{Algebra@{Algebra}!VecToso3@{VecToso3}}
+\index{VecToso3@{VecToso3}!Algebra@{Algebra}}
+\doxysubsubsection{\texorpdfstring{VecToso3()}{VecToso3()}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix3d Algebra\+::\+Vec\+Toso3 (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector3d \&}]{omg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the skew symmetric matrix representation of a vector $v=\begin{vmatrix}v_1&v_2&v_3\end{vmatrix}$ $skew(v)=\begin{vmatrix}0&-v_3&v_2\\v_3&0&1v_1\\-v_2&v_1&0\end{vmatrix}$. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em omg} & Eigen\+::\+Vector3d 3x1 angular velocity vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{namespaceAlgebra_a24b774a7cebece411c6e128bf5dbbc22}{so3\+To\+Vec}} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+Eigen\+::\+Matrix\+Xd 3x3 skew symmetric matrix in so3 
+\end{DoxyReturn}

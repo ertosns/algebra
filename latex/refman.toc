@@ -1,0 +1,65 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}Namespace Index}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Namespace List}{1}{section.1.1}%
+\contentsline {chapter}{\numberline {2}File Index}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}File List}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Namespace Documentation}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Algebra Namespace Reference}{5}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Detailed Description}{6}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Function Documentation}{6}{subsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.2.1}ad()}{6}{subsubsection.3.1.2.1}%
+\contentsline {subsubsection}{\numberline {3.1.2.2}Adjoint()}{7}{subsubsection.3.1.2.2}%
+\contentsline {subsubsection}{\numberline {3.1.2.3}AxisAng3()}{7}{subsubsection.3.1.2.3}%
+\contentsline {subsubsection}{\numberline {3.1.2.4}AxisAng6()}{7}{subsubsection.3.1.2.4}%
+\contentsline {subsubsection}{\numberline {3.1.2.5}DistanceToSE3()}{8}{subsubsection.3.1.2.5}%
+\contentsline {subsubsection}{\numberline {3.1.2.6}DistanceToSO3()}{8}{subsubsection.3.1.2.6}%
+\contentsline {subsubsection}{\numberline {3.1.2.7}Epsilon()}{8}{subsubsection.3.1.2.7}%
+\contentsline {subsubsection}{\numberline {3.1.2.8}MatrixExp3()}{9}{subsubsection.3.1.2.8}%
+\contentsline {subsubsection}{\numberline {3.1.2.9}MatrixExp6()}{9}{subsubsection.3.1.2.9}%
+\contentsline {subsubsection}{\numberline {3.1.2.10}MatrixLog3()}{9}{subsubsection.3.1.2.10}%
+\contentsline {subsubsection}{\numberline {3.1.2.11}MatrixLog6()}{10}{subsubsection.3.1.2.11}%
+\contentsline {subsubsection}{\numberline {3.1.2.12}Normalize()}{10}{subsubsection.3.1.2.12}%
+\contentsline {subsubsection}{\numberline {3.1.2.13}ProjectToSE3()}{10}{subsubsection.3.1.2.13}%
+\contentsline {subsubsection}{\numberline {3.1.2.14}ProjectToSO3()}{11}{subsubsection.3.1.2.14}%
+\contentsline {subsubsection}{\numberline {3.1.2.15}RotInv()}{11}{subsubsection.3.1.2.15}%
+\contentsline {subsubsection}{\numberline {3.1.2.16}RpToTrans()}{12}{subsubsection.3.1.2.16}%
+\contentsline {subsubsection}{\numberline {3.1.2.17}ScrewToAxis()}{12}{subsubsection.3.1.2.17}%
+\contentsline {subsubsection}{\numberline {3.1.2.18}se3ToVec()}{12}{subsubsection.3.1.2.18}%
+\contentsline {subsubsection}{\numberline {3.1.2.19}so3ToVec()}{13}{subsubsection.3.1.2.19}%
+\contentsline {subsubsection}{\numberline {3.1.2.20}TestIfSE3()}{13}{subsubsection.3.1.2.20}%
+\contentsline {subsubsection}{\numberline {3.1.2.21}TestIfSO3()}{14}{subsubsection.3.1.2.21}%
+\contentsline {subsubsection}{\numberline {3.1.2.22}TransInv()}{14}{subsubsection.3.1.2.22}%
+\contentsline {subsubsection}{\numberline {3.1.2.23}TransToRp()}{14}{subsubsection.3.1.2.23}%
+\contentsline {subsubsection}{\numberline {3.1.2.24}VecTose3()}{15}{subsubsection.3.1.2.24}%
+\contentsline {subsubsection}{\numberline {3.1.2.25}VecToso3()}{15}{subsubsection.3.1.2.25}%
+\contentsline {chapter}{\numberline {4}File Documentation}{17}{chapter.4}%
+\contentsline {section}{\numberline {4.1}algebra.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}hpp File Reference}{17}{section.4.1}%
+\contentsline {section}{\numberline {4.2}algebra\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}test.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}cpp File Reference}{17}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Function Documentation}{18}{subsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.1.1}main()}{18}{subsubsection.4.2.1.1}%
+\contentsline {subsubsection}{\numberline {4.2.1.2}TEST()\hspace {0.1cm}{\footnotesize \ttfamily [1/21]}}{18}{subsubsection.4.2.1.2}%
+\contentsline {subsubsection}{\numberline {4.2.1.3}TEST()\hspace {0.1cm}{\footnotesize \ttfamily [2/21]}}{18}{subsubsection.4.2.1.3}%
+\contentsline {subsubsection}{\numberline {4.2.1.4}TEST()\hspace {0.1cm}{\footnotesize \ttfamily [3/21]}}{18}{subsubsection.4.2.1.4}%
+\contentsline {subsubsection}{\numberline {4.2.1.5}TEST()\hspace {0.1cm}{\footnotesize \ttfamily [4/21]}}{18}{subsubsection.4.2.1.5}%
+\contentsline {subsubsection}{\numberline {4.2.1.6}TEST()\hspace {0.1cm}{\footnotesize \ttfamily [5/21]}}{19}{subsubsection.4.2.1.6}%
+\contentsline {subsubsection}{\numberline {4.2.1.7}TEST()\hspace {0.1cm}{\footnotesize \ttfamily [6/21]}}{19}{subsubsection.4.2.1.7}%
+\contentsline {subsubsection}{\numberline {4.2.1.8}TEST()\hspace {0.1cm}{\footnotesize \ttfamily [7/21]}}{19}{subsubsection.4.2.1.8}%
+\contentsline {subsubsection}{\numberline {4.2.1.9}TEST()\hspace {0.1cm}{\footnotesize \ttfamily [8/21]}}{19}{subsubsection.4.2.1.9}%
+\contentsline {subsubsection}{\numberline {4.2.1.10}TEST()\hspace {0.1cm}{\footnotesize \ttfamily [9/21]}}{19}{subsubsection.4.2.1.10}%
+\contentsline {subsubsection}{\numberline {4.2.1.11}TEST()\hspace {0.1cm}{\footnotesize \ttfamily [10/21]}}{19}{subsubsection.4.2.1.11}%
+\contentsline {subsubsection}{\numberline {4.2.1.12}TEST()\hspace {0.1cm}{\footnotesize \ttfamily [11/21]}}{20}{subsubsection.4.2.1.12}%
+\contentsline {subsubsection}{\numberline {4.2.1.13}TEST()\hspace {0.1cm}{\footnotesize \ttfamily [12/21]}}{20}{subsubsection.4.2.1.13}%
+\contentsline {subsubsection}{\numberline {4.2.1.14}TEST()\hspace {0.1cm}{\footnotesize \ttfamily [13/21]}}{20}{subsubsection.4.2.1.14}%
+\contentsline {subsubsection}{\numberline {4.2.1.15}TEST()\hspace {0.1cm}{\footnotesize \ttfamily [14/21]}}{20}{subsubsection.4.2.1.15}%
+\contentsline {subsubsection}{\numberline {4.2.1.16}TEST()\hspace {0.1cm}{\footnotesize \ttfamily [15/21]}}{20}{subsubsection.4.2.1.16}%
+\contentsline {subsubsection}{\numberline {4.2.1.17}TEST()\hspace {0.1cm}{\footnotesize \ttfamily [16/21]}}{20}{subsubsection.4.2.1.17}%
+\contentsline {subsubsection}{\numberline {4.2.1.18}TEST()\hspace {0.1cm}{\footnotesize \ttfamily [17/21]}}{21}{subsubsection.4.2.1.18}%
+\contentsline {subsubsection}{\numberline {4.2.1.19}TEST()\hspace {0.1cm}{\footnotesize \ttfamily [18/21]}}{21}{subsubsection.4.2.1.19}%
+\contentsline {subsubsection}{\numberline {4.2.1.20}TEST()\hspace {0.1cm}{\footnotesize \ttfamily [19/21]}}{21}{subsubsection.4.2.1.20}%
+\contentsline {subsubsection}{\numberline {4.2.1.21}TEST()\hspace {0.1cm}{\footnotesize \ttfamily [20/21]}}{21}{subsubsection.4.2.1.21}%
+\contentsline {subsubsection}{\numberline {4.2.1.22}TEST()\hspace {0.1cm}{\footnotesize \ttfamily [21/21]}}{21}{subsubsection.4.2.1.22}%
+\contentsline {section}{\numberline {4.3}c1-\/c3.cpp File Reference}{21}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Function Documentation}{22}{subsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.1.1}main()}{22}{subsubsection.4.3.1.1}%
+\contentsline {section}{\numberline {4.4}c1w3.\discretionary {\mbox {\scriptsize $\DOTSB \leftarrow \joinrel \rhook $}}{}{}cpp File Reference}{22}{section.4.4}%
+\contentsline {chapter}{Index}{23}{section*.4}%

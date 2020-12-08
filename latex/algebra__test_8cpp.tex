@@ -1,0 +1,190 @@
+\hypertarget{algebra__test_8cpp}{}\doxysection{algebra\+\_\+test.\+cpp File Reference}
+\label{algebra__test_8cpp}\index{algebra\_test.cpp@{algebra\_test.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$Eigen/\+Dense$>$}\newline
+{\ttfamily \#include \char`\"{}gmock/gmock.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}algebra.\+hpp\char`\"{}}\newline
+Include dependency graph for algebra\+\_\+test.\+cpp\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{algebra__test_8cpp_a1360be949d18601c2b7f4ac96b714d95}{T\+E\+ST}} (A\+L\+G\+E\+B\+RA, Epsilon)
+\item 
+\mbox{\hyperlink{algebra__test_8cpp_a6bffdf394a6561c3b9762db6771aa445}{T\+E\+ST}} (A\+L\+G\+E\+B\+RA, So3\+To\+Vec\+Test)
+\item 
+\mbox{\hyperlink{algebra__test_8cpp_a990937115d2b34f3235e4a7dc6bda6ec}{T\+E\+ST}} (A\+L\+G\+E\+B\+RA, Vec\+To\+S\+O3\+Test)
+\item 
+\mbox{\hyperlink{algebra__test_8cpp_ae35a1d2c5f2e37b2509966b763cb46be}{T\+E\+ST}} (A\+L\+G\+E\+B\+RA, Rp\+To\+Trans)
+\item 
+\mbox{\hyperlink{algebra__test_8cpp_a915bb8c8b1a43657fdbbb45837b2812d}{T\+E\+ST}} (A\+L\+G\+E\+B\+RA, Trans\+To\+Rp)
+\item 
+\mbox{\hyperlink{algebra__test_8cpp_a632eebd0633b43badb5b9fda8b6b4281}{T\+E\+ST}} (A\+L\+G\+E\+B\+RA, Vec\+Toso3)
+\item 
+\mbox{\hyperlink{algebra__test_8cpp_aea59b23c797799c7516bf0ad6d9226ac}{T\+E\+ST}} (A\+L\+G\+E\+B\+RA, so3\+To\+Vec)
+\item 
+\mbox{\hyperlink{algebra__test_8cpp_aeaab1d66c0442d2bd05dd5942f181f68}{T\+E\+ST}} (A\+L\+G\+E\+B\+RA, Axis\+Ang3)
+\item 
+\mbox{\hyperlink{algebra__test_8cpp_ad5887be22b2cd0b4eaf2bae608944a01}{T\+E\+ST}} (A\+L\+G\+E\+B\+RA, Adjoint)
+\item 
+\mbox{\hyperlink{algebra__test_8cpp_a79a037d97ecdb5509a5d29b60cf86ba5}{T\+E\+ST}} (A\+L\+G\+E\+B\+RA, Adjoint2)
+\item 
+\mbox{\hyperlink{algebra__test_8cpp_a127c7767d1f6a82edf41d697000dba17}{T\+E\+ST}} (A\+L\+G\+E\+B\+RA, Matrix\+Log3)
+\item 
+\mbox{\hyperlink{algebra__test_8cpp_ab772733539e515ea90747ec32fb5b989}{T\+E\+ST}} (A\+L\+G\+E\+B\+RA, Trans\+Inv)
+\item 
+\mbox{\hyperlink{algebra__test_8cpp_a91ae8f0d5e6147556974d42724d35758}{T\+E\+ST}} (A\+L\+G\+E\+B\+RA, Rot\+Inv)
+\item 
+\mbox{\hyperlink{algebra__test_8cpp_a2775932e81554cca279841e817cc1d8b}{T\+E\+ST}} (A\+L\+G\+E\+B\+RA, Screw\+To\+Axis)
+\item 
+\mbox{\hyperlink{algebra__test_8cpp_a80d8a788defe7772a7d4f17fa882dcc9}{T\+E\+ST}} (A\+L\+G\+E\+B\+RA, Axis\+Ang6)
+\item 
+\mbox{\hyperlink{algebra__test_8cpp_ac29d14d3661d4262d53b25adfb07b64d}{T\+E\+ST}} (A\+L\+G\+E\+B\+RA, Matrix\+Log6)
+\item 
+\mbox{\hyperlink{algebra__test_8cpp_a1eb89ca2b7b301424d36a58944d0a2ed}{T\+E\+ST}} (A\+L\+G\+E\+B\+RA, Distance\+To\+S\+O3\+Test)
+\item 
+\mbox{\hyperlink{algebra__test_8cpp_a9b33f21ddbe8b822953f409c68d7add2}{T\+E\+ST}} (A\+L\+G\+E\+B\+RA, Distance\+To\+S\+E3\+Test)
+\item 
+\mbox{\hyperlink{algebra__test_8cpp_ae27607af8ba27fa264af0f5ac01f9735}{T\+E\+ST}} (A\+L\+G\+E\+B\+RA, Test\+If\+S\+O3\+Test)
+\item 
+\mbox{\hyperlink{algebra__test_8cpp_a58648d24a27bde1e7015801ee041643e}{T\+E\+ST}} (A\+L\+G\+E\+B\+RA, Test\+If\+S\+E3\+Test)
+\item 
+\mbox{\hyperlink{algebra__test_8cpp_a641bb7f0f98e853cd28cd4dbfb7e91c0}{T\+E\+ST}} (A\+L\+G\+E\+B\+RA, ad\+Test)
+\item 
+int \mbox{\hyperlink{algebra__test_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{algebra__test_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{algebra__test_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{algebra\_test.cpp@{algebra\_test.cpp}!main@{main}}
+\index{main@{main}!algebra\_test.cpp@{algebra\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{algebra__test_8cpp_ad5887be22b2cd0b4eaf2bae608944a01}\label{algebra__test_8cpp_ad5887be22b2cd0b4eaf2bae608944a01}} 
+\index{algebra\_test.cpp@{algebra\_test.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!algebra\_test.cpp@{algebra\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [1/21]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{A\+L\+G\+E\+B\+RA}]{,  }\item[{Adjoint}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{algebra__test_8cpp_a79a037d97ecdb5509a5d29b60cf86ba5}\label{algebra__test_8cpp_a79a037d97ecdb5509a5d29b60cf86ba5}} 
+\index{algebra\_test.cpp@{algebra\_test.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!algebra\_test.cpp@{algebra\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [2/21]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{A\+L\+G\+E\+B\+RA}]{,  }\item[{Adjoint2}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{algebra__test_8cpp_a641bb7f0f98e853cd28cd4dbfb7e91c0}\label{algebra__test_8cpp_a641bb7f0f98e853cd28cd4dbfb7e91c0}} 
+\index{algebra\_test.cpp@{algebra\_test.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!algebra\_test.cpp@{algebra\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [3/21]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{A\+L\+G\+E\+B\+RA}]{,  }\item[{ad\+Test}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{algebra__test_8cpp_aeaab1d66c0442d2bd05dd5942f181f68}\label{algebra__test_8cpp_aeaab1d66c0442d2bd05dd5942f181f68}} 
+\index{algebra\_test.cpp@{algebra\_test.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!algebra\_test.cpp@{algebra\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [4/21]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{A\+L\+G\+E\+B\+RA}]{,  }\item[{Axis\+Ang3}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{algebra__test_8cpp_a80d8a788defe7772a7d4f17fa882dcc9}\label{algebra__test_8cpp_a80d8a788defe7772a7d4f17fa882dcc9}} 
+\index{algebra\_test.cpp@{algebra\_test.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!algebra\_test.cpp@{algebra\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [5/21]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{A\+L\+G\+E\+B\+RA}]{,  }\item[{Axis\+Ang6}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{algebra__test_8cpp_a9b33f21ddbe8b822953f409c68d7add2}\label{algebra__test_8cpp_a9b33f21ddbe8b822953f409c68d7add2}} 
+\index{algebra\_test.cpp@{algebra\_test.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!algebra\_test.cpp@{algebra\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [6/21]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{A\+L\+G\+E\+B\+RA}]{,  }\item[{Distance\+To\+S\+E3\+Test}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{algebra__test_8cpp_a1eb89ca2b7b301424d36a58944d0a2ed}\label{algebra__test_8cpp_a1eb89ca2b7b301424d36a58944d0a2ed}} 
+\index{algebra\_test.cpp@{algebra\_test.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!algebra\_test.cpp@{algebra\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [7/21]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{A\+L\+G\+E\+B\+RA}]{,  }\item[{Distance\+To\+S\+O3\+Test}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{algebra__test_8cpp_a1360be949d18601c2b7f4ac96b714d95}\label{algebra__test_8cpp_a1360be949d18601c2b7f4ac96b714d95}} 
+\index{algebra\_test.cpp@{algebra\_test.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!algebra\_test.cpp@{algebra\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [8/21]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{A\+L\+G\+E\+B\+RA}]{,  }\item[{Epsilon}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{algebra__test_8cpp_a127c7767d1f6a82edf41d697000dba17}\label{algebra__test_8cpp_a127c7767d1f6a82edf41d697000dba17}} 
+\index{algebra\_test.cpp@{algebra\_test.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!algebra\_test.cpp@{algebra\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [9/21]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{A\+L\+G\+E\+B\+RA}]{,  }\item[{Matrix\+Log3}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{algebra__test_8cpp_ac29d14d3661d4262d53b25adfb07b64d}\label{algebra__test_8cpp_ac29d14d3661d4262d53b25adfb07b64d}} 
+\index{algebra\_test.cpp@{algebra\_test.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!algebra\_test.cpp@{algebra\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [10/21]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{A\+L\+G\+E\+B\+RA}]{,  }\item[{Matrix\+Log6}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{algebra__test_8cpp_a91ae8f0d5e6147556974d42724d35758}\label{algebra__test_8cpp_a91ae8f0d5e6147556974d42724d35758}} 
+\index{algebra\_test.cpp@{algebra\_test.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!algebra\_test.cpp@{algebra\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [11/21]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{A\+L\+G\+E\+B\+RA}]{,  }\item[{Rot\+Inv}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{algebra__test_8cpp_ae35a1d2c5f2e37b2509966b763cb46be}\label{algebra__test_8cpp_ae35a1d2c5f2e37b2509966b763cb46be}} 
+\index{algebra\_test.cpp@{algebra\_test.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!algebra\_test.cpp@{algebra\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [12/21]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{A\+L\+G\+E\+B\+RA}]{,  }\item[{Rp\+To\+Trans}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{algebra__test_8cpp_a2775932e81554cca279841e817cc1d8b}\label{algebra__test_8cpp_a2775932e81554cca279841e817cc1d8b}} 
+\index{algebra\_test.cpp@{algebra\_test.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!algebra\_test.cpp@{algebra\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [13/21]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{A\+L\+G\+E\+B\+RA}]{,  }\item[{Screw\+To\+Axis}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{algebra__test_8cpp_aea59b23c797799c7516bf0ad6d9226ac}\label{algebra__test_8cpp_aea59b23c797799c7516bf0ad6d9226ac}} 
+\index{algebra\_test.cpp@{algebra\_test.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!algebra\_test.cpp@{algebra\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [14/21]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{A\+L\+G\+E\+B\+RA}]{,  }\item[{so3\+To\+Vec}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{algebra__test_8cpp_a6bffdf394a6561c3b9762db6771aa445}\label{algebra__test_8cpp_a6bffdf394a6561c3b9762db6771aa445}} 
+\index{algebra\_test.cpp@{algebra\_test.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!algebra\_test.cpp@{algebra\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [15/21]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{A\+L\+G\+E\+B\+RA}]{,  }\item[{So3\+To\+Vec\+Test}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{algebra__test_8cpp_a58648d24a27bde1e7015801ee041643e}\label{algebra__test_8cpp_a58648d24a27bde1e7015801ee041643e}} 
+\index{algebra\_test.cpp@{algebra\_test.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!algebra\_test.cpp@{algebra\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [16/21]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{A\+L\+G\+E\+B\+RA}]{,  }\item[{Test\+If\+S\+E3\+Test}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{algebra__test_8cpp_ae27607af8ba27fa264af0f5ac01f9735}\label{algebra__test_8cpp_ae27607af8ba27fa264af0f5ac01f9735}} 
+\index{algebra\_test.cpp@{algebra\_test.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!algebra\_test.cpp@{algebra\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [17/21]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{A\+L\+G\+E\+B\+RA}]{,  }\item[{Test\+If\+S\+O3\+Test}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{algebra__test_8cpp_ab772733539e515ea90747ec32fb5b989}\label{algebra__test_8cpp_ab772733539e515ea90747ec32fb5b989}} 
+\index{algebra\_test.cpp@{algebra\_test.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!algebra\_test.cpp@{algebra\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [18/21]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{A\+L\+G\+E\+B\+RA}]{,  }\item[{Trans\+Inv}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{algebra__test_8cpp_a915bb8c8b1a43657fdbbb45837b2812d}\label{algebra__test_8cpp_a915bb8c8b1a43657fdbbb45837b2812d}} 
+\index{algebra\_test.cpp@{algebra\_test.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!algebra\_test.cpp@{algebra\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [19/21]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{A\+L\+G\+E\+B\+RA}]{,  }\item[{Trans\+To\+Rp}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{algebra__test_8cpp_a632eebd0633b43badb5b9fda8b6b4281}\label{algebra__test_8cpp_a632eebd0633b43badb5b9fda8b6b4281}} 
+\index{algebra\_test.cpp@{algebra\_test.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!algebra\_test.cpp@{algebra\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [20/21]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{A\+L\+G\+E\+B\+RA}]{,  }\item[{Vec\+Toso3}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{algebra__test_8cpp_a990937115d2b34f3235e4a7dc6bda6ec}\label{algebra__test_8cpp_a990937115d2b34f3235e4a7dc6bda6ec}} 
+\index{algebra\_test.cpp@{algebra\_test.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!algebra\_test.cpp@{algebra\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [21/21]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{A\+L\+G\+E\+B\+RA}]{,  }\item[{Vec\+To\+S\+O3\+Test}]{ }\end{DoxyParamCaption})}
+
