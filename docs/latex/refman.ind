@@ -1,0 +1,124 @@
+\begin{theindex}
+
+  \item {/home/poetry/recovery/MR/algebra/source/algebra.cpp}, 
+		\hyperpage{17}
+  \item {/home/poetry/recovery/MR/algebra/source/algebra.hpp}, 
+		\hyperpage{17}
+  \item {/home/poetry/recovery/MR/algebra/source/exercise.cpp}, 
+		\hyperpage{19}
+
+  \indexspace
+
+  \item {ad}
+    \subitem {Algebra}, \hyperpage{6}
+  \item {Adjoint}
+    \subitem {Algebra}, \hyperpage{7}
+  \item {Algebra}, \hyperpage{5}
+    \subitem {ad}, \hyperpage{6}
+    \subitem {Adjoint}, \hyperpage{7}
+    \subitem {AxisAng3}, \hyperpage{7}
+    \subitem {AxisAng6}, \hyperpage{7}
+    \subitem {DistanceToSE3}, \hyperpage{7}
+    \subitem {DistanceToSO3}, \hyperpage{8}
+    \subitem {Epsilon}, \hyperpage{8}
+    \subitem {MatrixExp3}, \hyperpage{9}
+    \subitem {MatrixExp6}, \hyperpage{9}
+    \subitem {MatrixLog3}, \hyperpage{9}
+    \subitem {MatrixLog6}, \hyperpage{10}
+    \subitem {Normalize}, \hyperpage{10}
+    \subitem {ProjectToSE3}, \hyperpage{10}
+    \subitem {ProjectToSO3}, \hyperpage{11}
+    \subitem {RotInv}, \hyperpage{11}
+    \subitem {RpToTrans}, \hyperpage{11}
+    \subitem {ScrewToAxis}, \hyperpage{12}
+    \subitem {se3ToVec}, \hyperpage{12}
+    \subitem {so3ToVec}, \hyperpage{13}
+    \subitem {TestIfSE3}, \hyperpage{13}
+    \subitem {TestIfSO3}, \hyperpage{13}
+    \subitem {TransInv}, \hyperpage{14}
+    \subitem {TransToRp}, \hyperpage{14}
+    \subitem {VecTose3}, \hyperpage{14}
+    \subitem {VecToso3}, \hyperpage{15}
+  \item {algebra.hpp}
+    \subitem {M\_PI}, \hyperpage{19}
+  \item {AxisAng3}
+    \subitem {Algebra}, \hyperpage{7}
+  \item {AxisAng6}
+    \subitem {Algebra}, \hyperpage{7}
+
+  \indexspace
+
+  \item {DistanceToSE3}
+    \subitem {Algebra}, \hyperpage{7}
+  \item {DistanceToSO3}
+    \subitem {Algebra}, \hyperpage{8}
+
+  \indexspace
+
+  \item {Epsilon}
+    \subitem {Algebra}, \hyperpage{8}
+  \item {exercise.cpp}
+    \subitem {main}, \hyperpage{19}
+
+  \indexspace
+
+  \item {M\_PI}
+    \subitem {algebra.hpp}, \hyperpage{19}
+  \item {main}
+    \subitem {exercise.cpp}, \hyperpage{19}
+  \item {MatrixExp3}
+    \subitem {Algebra}, \hyperpage{9}
+  \item {MatrixExp6}
+    \subitem {Algebra}, \hyperpage{9}
+  \item {MatrixLog3}
+    \subitem {Algebra}, \hyperpage{9}
+  \item {MatrixLog6}
+    \subitem {Algebra}, \hyperpage{10}
+
+  \indexspace
+
+  \item {Normalize}
+    \subitem {Algebra}, \hyperpage{10}
+
+  \indexspace
+
+  \item {ProjectToSE3}
+    \subitem {Algebra}, \hyperpage{10}
+  \item {ProjectToSO3}
+    \subitem {Algebra}, \hyperpage{11}
+
+  \indexspace
+
+  \item {RotInv}
+    \subitem {Algebra}, \hyperpage{11}
+  \item {RpToTrans}
+    \subitem {Algebra}, \hyperpage{11}
+
+  \indexspace
+
+  \item {ScrewToAxis}
+    \subitem {Algebra}, \hyperpage{12}
+  \item {se3ToVec}
+    \subitem {Algebra}, \hyperpage{12}
+  \item {so3ToVec}
+    \subitem {Algebra}, \hyperpage{13}
+
+  \indexspace
+
+  \item {TestIfSE3}
+    \subitem {Algebra}, \hyperpage{13}
+  \item {TestIfSO3}
+    \subitem {Algebra}, \hyperpage{13}
+  \item {TransInv}
+    \subitem {Algebra}, \hyperpage{14}
+  \item {TransToRp}
+    \subitem {Algebra}, \hyperpage{14}
+
+  \indexspace
+
+  \item {VecTose3}
+    \subitem {Algebra}, \hyperpage{14}
+  \item {VecToso3}
+    \subitem {Algebra}, \hyperpage{15}
+
+\end{theindex}

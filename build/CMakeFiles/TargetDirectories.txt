@@ -1,0 +1,4 @@
+/home/poetry/recovery/MR/algebra/build/CMakeFiles/rebuild_cache.dir
+/home/poetry/recovery/MR/algebra/build/CMakeFiles/edit_cache.dir
+/home/poetry/recovery/MR/algebra/build/CMakeFiles/algebra_test.dir
+/home/poetry/recovery/MR/algebra/build/CMakeFiles/algebra.dir

@@ -4,7 +4,10 @@
 using namespace std;
 using namespace Algebra;
 
-
+/* 
+ *this is just a working exercise to for testing the api.
+ *full tests are writen (see ./tests/)
+ */
 int main(int argc, char **args) {
   //two frames {a,b} with respect to frame s.
   Eigen::Matrix3d Ra;

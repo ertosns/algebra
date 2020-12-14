@@ -1,0 +1,82 @@
+\hypertarget{algebra_8hpp}{}\doxysection{/home/poetry/recovery/\+M\+R/algebra/source/algebra.hpp File Reference}
+\label{algebra_8hpp}\index{/home/poetry/recovery/MR/algebra/source/algebra.hpp@{/home/poetry/recovery/MR/algebra/source/algebra.hpp}}
+{\ttfamily \#include $<$Eigen/\+Dense$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+Include dependency graph for algebra.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceAlgebra}{Algebra}}
+\begin{DoxyCompactList}\small\item\em Is Linear \mbox{\hyperlink{namespaceAlgebra}{Algebra}} library of required mathematics for, Kinetics, and Kinematics mechanics. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{algebra_8hpp_ae71449b1cc6e6250b91f539153a7a0d3}{M\+\_\+\+PI}}~3.\+14159265358979323846  /$\ast$ pi $\ast$/
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{namespaceAlgebra_a1ea948e34dd9b919a55e3fa186ee4456}{Algebra\+::\+Epsilon}} (const double val)
+\begin{DoxyCompactList}\small\item\em Find if the value is negligible, or close to zero. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix3d \mbox{\hyperlink{namespaceAlgebra_a7d13e726ac9eccc7ca93d9aef37d1e43}{Algebra\+::\+Vec\+Toso3}} (const Eigen\+::\+Vector3d \&omg)
+\begin{DoxyCompactList}\small\item\em Get the skew symmetric matrix representation of a vector $v=\begin{vmatrix}v_1&v_2&v_3\end{vmatrix}$ $skew(v)=\begin{vmatrix}0&-v_3&v_2\\v_3&0&-v_1\\-v_2&v_1&0\end{vmatrix}$. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{namespaceAlgebra_a24b774a7cebece411c6e128bf5dbbc22}{Algebra\+::so3\+To\+Vec}} (const Eigen\+::\+Matrix\+Xd \&so3mat)
+\begin{DoxyCompactList}\small\item\em Returns vector represented by the skew symmetric matrix. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{namespaceAlgebra_a092a9ff641b2ef4f6177d9749db1bbd8}{Algebra\+::\+Rp\+To\+Trans}} (const Eigen\+::\+Matrix3d \&R, const Eigen\+::\+Vector3d \&p)
+\begin{DoxyCompactList}\small\item\em Combines a rotation matrix and position vector into a single Special Euclidian Group (S\+E3) homogeneous transformation matrix. \end{DoxyCompactList}\item 
+std\+::vector$<$ Eigen\+::\+Matrix\+Xd $>$ \mbox{\hyperlink{namespaceAlgebra_aa5f8c1b2938637d6028e871c14d99e64}{Algebra\+::\+Trans\+To\+Rp}} (const Eigen\+::\+Matrix\+Xd \&T)
+\begin{DoxyCompactList}\small\item\em Separates the rotation matrix and position vector from the transfomation matrix representation. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{namespaceAlgebra_a933fa79752a7ffba2bb04867ba367e74}{Algebra\+::\+Vec\+Tose3}} (const Eigen\+::\+Vector\+Xd \&V)
+\begin{DoxyCompactList}\small\item\em Translates a spatial velocity vector into a transformation matrix. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{namespaceAlgebra_afec0883ab58c75e9a8762c3431218d71}{Algebra\+::se3\+To\+Vec}} (const Eigen\+::\+Matrix\+Xd \&T)
+\begin{DoxyCompactList}\small\item\em Translates a transformation matrix into a spatial velocity vector. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{namespaceAlgebra_a129acb4989010b2ac9b9a8c981d0360b}{Algebra\+::\+Normalize}} (Eigen\+::\+Matrix\+Xd V)
+\begin{DoxyCompactList}\small\item\em Returns a normalized version of the input vector. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector4d \mbox{\hyperlink{namespaceAlgebra_af38d42521fdb2d9d82d792e798eeea89}{Algebra\+::\+Axis\+Ang3}} (const Eigen\+::\+Vector3d \&expc3)
+\item 
+Eigen\+::\+Matrix3d \mbox{\hyperlink{namespaceAlgebra_aa27c1437615dd5c5b831a175636bbbc8}{Algebra\+::\+Matrix\+Exp3}} (const Eigen\+::\+Matrix3d \&so3mat)
+\begin{DoxyCompactList}\small\item\em Translates an exponential rotation into a rotation matrix using rodrigues formula. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix3d \mbox{\hyperlink{namespaceAlgebra_a78457405bdd5f9f56b1ae5b3c3e23db7}{Algebra\+::\+Matrix\+Log3}} (const Eigen\+::\+Matrix3d \&R)
+\begin{DoxyCompactList}\small\item\em Function\+: Computes the matrix logarithm of a rotation matrix. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{namespaceAlgebra_a5da027e937bc6a082ad206eb9889e826}{Algebra\+::\+Adjoint}} (const Eigen\+::\+Matrix\+Xd \&T)
+\begin{DoxyCompactList}\small\item\em Provides the adjoint representation of a transformation matrix Used to change the frame of reference for spatial velocity vectors. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{namespaceAlgebra_a43c31fe8604c05c5a8fa0bfa51ddab4e}{Algebra\+::\+Matrix\+Exp6}} (const Eigen\+::\+Matrix\+Xd \&se3mat)
+\begin{DoxyCompactList}\small\item\em Rotation expanded for screw axis. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{namespaceAlgebra_a0a89e8ca319960bd317a40da457266cf}{Algebra\+::\+Matrix\+Log6}} (const Eigen\+::\+Matrix\+Xd \&T)
+\begin{DoxyCompactList}\small\item\em Computes the matrix logarithm of a homogeneous transformation matrix. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{namespaceAlgebra_a0ac2e7b69a25db797f510899ffd72dec}{Algebra\+::\+Trans\+Inv}} (const Eigen\+::\+Matrix\+Xd \&transform)
+\begin{DoxyCompactList}\small\item\em Inverts a homogeneous transformation matrix. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{namespaceAlgebra_a2b319cd2a837710f808bd0ae8e908806}{Algebra\+::\+Rot\+Inv}} (const Eigen\+::\+Matrix\+Xd \&rot\+Matrix)
+\begin{DoxyCompactList}\small\item\em Inverts a rotation matrix. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{namespaceAlgebra_ac1d1edd08f67767004fa1333a6732108}{Algebra\+::\+Screw\+To\+Axis}} (Eigen\+::\+Vector3d q, Eigen\+::\+Vector3d s, double h)
+\begin{DoxyCompactList}\small\item\em Takes a parametric description of a screw axis and converts it to a normalized screw axis. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{namespaceAlgebra_a7549c580440aa3bf7c4e6fa0b86ffef7}{Algebra\+::\+Axis\+Ang6}} (const Eigen\+::\+Vector\+Xd \&expc6)
+\begin{DoxyCompactList}\small\item\em Converts a 6-\/vector of exponential coordinates into screw axis-\/angle form. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{namespaceAlgebra_ad0315db5821366e5dea37cb7c4341e13}{Algebra\+::\+Project\+To\+S\+O3}} (const Eigen\+::\+Matrix\+Xd \&M)
+\begin{DoxyCompactList}\small\item\em Returns a projection of mat into S\+O(3) \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{namespaceAlgebra_a8eeb2650b9d5a5cf9c64acdc170e5cd2}{Algebra\+::\+Project\+To\+S\+E3}} (const Eigen\+::\+Matrix\+Xd \&M)
+\begin{DoxyCompactList}\small\item\em Returns a projection of mat into S\+E(3) \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{namespaceAlgebra_a1f902cb4b3aefc31a2f947114bdb6ec3}{Algebra\+::\+Distance\+To\+S\+O3}} (const Eigen\+::\+Matrix3d \&M)
+\begin{DoxyCompactList}\small\item\em Returns the Frobenius norm to describe the distance of mat from the S\+O(3) manifold. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{namespaceAlgebra_ae06a676bcdf495f79929289943c54a15}{Algebra\+::\+Distance\+To\+S\+E3}} (const Eigen\+::\+Matrix4d \&T)
+\begin{DoxyCompactList}\small\item\em Returns the Frobenius norm to describe the distance of mat from the S\+E(3) manifold. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespaceAlgebra_a7aba05b324d04d09bd93e4b0c1527578}{Algebra\+::\+Test\+If\+S\+O3}} (const Eigen\+::\+Matrix3d \&M)
+\item 
+bool \mbox{\hyperlink{namespaceAlgebra_a897aa672c95ca78bd9d5629590792c9a}{Algebra\+::\+Test\+If\+S\+E3}} (const Eigen\+::\+Matrix4d \&T)
+\item 
+Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{namespaceAlgebra_a1cc951ff2083347fbd3dbeaf478ce251}{Algebra\+::ad}} (Eigen\+::\+Vector\+Xd V)
+\begin{DoxyCompactList}\small\item\em Calculate the 6x6 matrix of the given 6-\/vector V. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{algebra_8hpp_ae71449b1cc6e6250b91f539153a7a0d3}\label{algebra_8hpp_ae71449b1cc6e6250b91f539153a7a0d3}} 
+\index{algebra.hpp@{algebra.hpp}!M\_PI@{M\_PI}}
+\index{M\_PI@{M\_PI}!algebra.hpp@{algebra.hpp}}
+\doxysubsubsection{\texorpdfstring{M\_PI}{M\_PI}}
+{\footnotesize\ttfamily \#define M\+\_\+\+PI~3.\+14159265358979323846  /$\ast$ pi $\ast$/}
+
