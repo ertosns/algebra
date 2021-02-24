@@ -12,7 +12,7 @@ include_directories(include /usr/include/gtest)
 include_directories(include ~/recovery/MR/algebra/source)
 
 find_library(algebra algebra
-  PATHS ~/recovery/MR/algebra/build
+  PATHS ./build
   )
 
 find_library(gtest gtest)
@@ -42,3 +42,7 @@ execute_process(COMMAND doxygen
 execute_process(COMMAND make
   WORKING_DIRECTORY docs/latex
   )
+
+install(TARGETS algebra)
+install(FILES source/algebra.hpp
+  DESTINATION /usr/include/algebra)

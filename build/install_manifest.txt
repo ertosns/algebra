@@ -1,0 +1,2 @@
+/usr/local/lib/libalgebra.a
+/usr/include/algebra/algebra.hpp

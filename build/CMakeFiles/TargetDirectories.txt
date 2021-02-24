@@ -1,0 +1,8 @@
+/home/zerin/prj/algebra/build/CMakeFiles/install/local.dir
+/home/zerin/prj/algebra/build/CMakeFiles/install.dir
+/home/zerin/prj/algebra/build/CMakeFiles/list_install_components.dir
+/home/zerin/prj/algebra/build/CMakeFiles/rebuild_cache.dir
+/home/zerin/prj/algebra/build/CMakeFiles/edit_cache.dir
+/home/zerin/prj/algebra/build/CMakeFiles/install/strip.dir
+/home/zerin/prj/algebra/build/CMakeFiles/algebra_test.dir
+/home/zerin/prj/algebra/build/CMakeFiles/algebra.dir
