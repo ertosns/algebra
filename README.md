@@ -4,11 +4,13 @@ C++ linear algebra library required for [ kinetics ] (https://github.com/ertosns
 
 
 # to deploy the library run:
-'''console
+
+```console
 user@name:~$ . ./install.sh
-'''
+```
 
 # to verify is working, you can try an example examples/exercise.cpp
-'''console
+
+```console
 user@name:~$ g++  exercise.cpp -lalgebra -I/usr/local/lib -I /usr/include/eigen3 -lpthread
-'''
+```
