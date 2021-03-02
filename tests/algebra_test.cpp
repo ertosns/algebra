@@ -96,7 +96,7 @@ TEST(ALGEBRA, AxisAng3) {
   //
   EXPECT_EQ(alg_v4(3), theta);
   Eigen::Vector3d alg_omg(alg_v4(0), alg_v4(1), alg_v4(2));
-  ASSERT_TRUE(alg_omg.isApprox(omg, 4));
+  ASSERT_TRUE(alg_omg.isApprox(omg));
 }
 
 TEST(ALGEBRA, Adjoint) {
@@ -115,25 +115,38 @@ TEST(ALGEBRA, Adjoint) {
 }
 
 TEST(ALGEBRA, Adjoint2) {
-  Eigen::Matrix4d T;
-  T << 1, 0, 0, 0,
-    0, 0, -1, 0,
-    0, 1, 0, 3,
-    0, 0, 0, 1;
-  Eigen::MatrixXd result(6, 6);
-  result <<
-    1, 0, 0, 0, 0, 0,
-    0, 0, -1, 0, 0, 0,
-    0, 1, 0, 0, 0, 0,
-    0, 0, 3, 1, 0, 0,
-    3, 0, 0, 0, 0, -1,
-    0, 0, 0, 0, 1, 0;
-
-  ASSERT_TRUE(Algebra::Adjoint(T).isApprox(result, 4));
+    Eigen::Matrix4d T;
+    T << 1, 0, 0, 0,
+        0, 0, -1, 0,
+        0, 1, 0, 3,
+        0, 0, 0, 1;
+    Eigen::MatrixXd result(6, 6);
+    result <<
+        1, 0, 0, 0, 0, 0,
+        0, 0, -1, 0, 0, 0,
+        0, 1, 0, 0, 0, 0,
+        0, 0, 3, 1, 0, 0,
+        3, 0, 0, 0, 0, -1,
+        0, 0, 0, 0, 1, 0;
+    ASSERT_TRUE(Algebra::Adjoint(T).isApprox(result));
 }
 
+TEST(ALGEBRA, crudeMatrixLog3) {
+    Eigen::MatrixXd R(3,3);
+    R << 0, 0, 1,
+        1, 0, 0,
+        0, 1, 0;
+    Eigen::MatrixXd ref(3,3);
+    ref << 0, -1.20919958,  1.20919958,
+        1.20919958,           0, -1.20919958,
+        -1.20919958,  1.20919958,           0;
+    //std::cout << "ref: " << ref << std::endl;
+    Eigen::MatrixXd ret = Algebra::MatrixLog3(R);
+    //std::cout << "ret: " << ret << std::endl;
+    ASSERT_TRUE(ret.isApprox(ref, 10));
+}
 // the implementation is the same of python package
-// but i according to the book there is missing theta need to be mutiplyed by the output.
+// but  according to the book there is missing theta need to be mutiplyed by the output.
 // secondly theta calculated isn't actually theta passed to R!!!
 
 
@@ -142,10 +155,13 @@ TEST(ALGEBRA, MatrixLog3) {
   Eigen::Vector3d omg(1,2,3);
   //note this tests words only for theta < M_PI there are multiples of solutios see section 3.2 of the book
   float theta=0.5367;
+
   auto so3=Algebra::VecToso3(omg*theta);
   Eigen::Matrix3d R = Algebra::MatrixExp3(so3);
   Eigen::Matrix3d logR = Algebra::MatrixLog3(R);
-  ASSERT_TRUE(so3.isApprox(logR, 4));
+  //std::cout << "ref: " << so3 << std::endl
+  //<< "ret: " << logR << std::endl;
+  ASSERT_TRUE(so3.isApprox(logR, 10));
 }
 
 TEST(ALGEBRA, TransInv) {
@@ -159,9 +175,9 @@ TEST(ALGEBRA, TransInv) {
     0, 0, 1, -3,
     0, -1, 0, 0,
     0, 0, 0, 1;
-  
+
   auto inv = Algebra::TransInv(input);
-  ASSERT_TRUE(inv.isApprox(result, 4));
+  ASSERT_TRUE(inv.isApprox(result));
 }
 
 
@@ -175,7 +191,7 @@ TEST(ALGEBRA, RotInv) {
     0, 0, 1,
     1, 0, 0;
   auto inv = Algebra::RotInv(input);
-  ASSERT_TRUE(inv.isApprox(result, 4));
+  ASSERT_TRUE(inv.isApprox(result));
 }
 
 TEST(ALGEBRA, ScrewToAxis) {
@@ -183,11 +199,11 @@ TEST(ALGEBRA, ScrewToAxis) {
   q << 3, 0, 1;
   s << 0, 0, 1;
   double h = 2;
-  
+
   Eigen::VectorXd axis = Algebra::ScrewToAxis(q, s, h);
   Eigen::VectorXd result(6);
   result << 0, 0, 1, 0, -3, 2;
-  
+
   ASSERT_TRUE(axis.isApprox(result, 4));
 }
 
@@ -196,7 +212,7 @@ TEST(ALGEBRA, AxisAng6) {
   Eigen::VectorXd result(7);
   input << 1.0, 0.0, 0.0, 1.0, 2.0, 3.0;
   result << 1.0, 0.0, 0.0, 1.0, 2.0, 3.0, 1.0;
-  
+
   Eigen::VectorXd output = Algebra::AxisAng6(input);
   ASSERT_TRUE(output.isApprox(result, 4));
 }
@@ -208,12 +224,12 @@ TEST(ALGEBRA, MatrixLog6) {
     0, 0, -1, 0,
     0, 1, 0, 3,
     0, 0, 0, 1;
-  
+
   result << 0, 0, 0, 0,
     0, 0, -1.57079633, 2.35619449,
     0, 1.57079633, 0, 2.35619449,
     0, 0, 0, 0;
-  
+
   Eigen::MatrixXd Toutput = Algebra::MatrixLog6(Tinput);
   ASSERT_TRUE(Toutput.isApprox(result, 4));
 }
@@ -260,7 +276,7 @@ TEST(ALGEBRA, TestIfSE3Test) {
 TEST(ALGEBRA, adTest) {
   Eigen::VectorXd V(6);
   V << 1, 2, 3, 4, 5, 6;
-  
+
   Eigen::MatrixXd result(6, 6);
   result << 0, -3, 2, 0, 0, 0,
     3, 0, -1, 0, 0, 0,
@@ -268,8 +284,8 @@ TEST(ALGEBRA, adTest) {
     0, -6, 5, 0, -3, 2,
     6, 0, -4, 3, 0, -1,
     -5, 4, 0, -2, 1, 0;
-  
-  ASSERT_TRUE(Algebra::ad(V).isApprox(result, 4));
+
+  ASSERT_TRUE(Algebra::ad(V).isApprox(result));
 }
 
 int main(int argc, char **argv) {

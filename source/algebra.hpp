@@ -9,22 +9,22 @@
 /** \namespace Algebra
  * \brief Is Linear Algebra library of required mathematics for,
  * Kinetics, and Kinematics mechanics.
- * 
+ *
  * Build on top of Kevin M. Lynch's, and Frank C. Park 'Modern Robotics' Book http://hades.mech.northwestern.edu/index.php/Modern_Robotics, and courses from Princeton.
  */
 namespace Algebra {
-  
+
   /**
    * Find if the value is negligible, or close to zero
    * @param val double value to be checked.
    * @return Boolean of true-ignore or false-can't ignore.
    */
   inline bool Epsilon(const double val) {
-    return (std::abs(val) < .000001);
+    return (std::abs(val) < 1e-6);
   }
-  
+
   /**
-   * Get the skew symmetric matrix representation 
+   * Get the skew symmetric matrix representation
    of a vector \f$v=\begin{vmatrix}v_1&v_2&v_3\end{vmatrix}\f$
    \f$skew(v)=\begin{vmatrix}0&-v_3&v_2\\v_3&0&-v_1\\-v_2&v_1&0\end{vmatrix}\f$
    * @param omg Eigen::Vector3d 3x1 angular velocity vector
@@ -54,11 +54,11 @@ namespace Algebra {
   }
 
   /**
-   * Combines a rotation matrix and position vector 
-   *           into a single Special Euclidian Group (SE3) 
+   * Combines a rotation matrix and position vector
+   *           into a single Special Euclidian Group (SE3)
    *           homogeneous transformation matrix
    *
-   * @param R Rotation Matrix 
+   * @param R Rotation Matrix
    * @param p Position Vector
    * @see TransToRp
    * @return Transformation Matrix \f$\begin{vmatrix}R&p\\0&1\end{vmatrix}\f$.
@@ -72,7 +72,7 @@ namespace Algebra {
   }
 
   /**
-   * Separates the rotation matrix and position vector 
+   * Separates the rotation matrix and position vector
    *           from the transfomation matrix representation
    * @param T Homogeneous transformation matrix \f$\begin{vmatrix}R&p\\0&1\end{vmatrix}\f$.
    * @see RpToTrans
@@ -84,12 +84,12 @@ namespace Algebra {
     Eigen::Matrix3d R_ret;
     // Get top left 3x3 corner
     R_ret = T.block<3, 3>(0, 0);
-    
+
     Eigen::Vector3d p_ret(T(0, 3), T(1, 3), T(2, 3));
-    
+
     Rp_ret.push_back(R_ret);
     Rp_ret.push_back(p_ret);
-    
+
     return Rp_ret;
   }
 
@@ -109,7 +109,7 @@ namespace Algebra {
   }
 
   /**
-   * Translates a transformation matrix into a spatial 
+   * Translates a transformation matrix into a spatial
    *           velocity vector
    * @param T Transformation matrix \f$\begin{vmatrix}[w]&v\\0&0\end{vmatrix}\f$
    * @see VecTose3
@@ -125,7 +125,7 @@ namespace Algebra {
    * Returns a normalized version of the input vector
    * @param V Eigen::MatrixXd
    * @return Eigen::MatrixXd normalized V
-   * Note: MatrixXd is used instead of VectorXd for the case of 
+   * Note: MatrixXd is used instead of VectorXd for the case of
    *      row vectors
    * 	  Requires a copy Useful because of the MatrixXd casting
    */
@@ -134,14 +134,14 @@ namespace Algebra {
     return V;
   }
 
-  /* 
+  /*
    * Translates an exponential rotation into it's individual components
    * @param expc3 Exponential rotation (rotation matrix in terms of a rotation axis and the angle of rotation) \f$[w]\theta\f$
    * @see AxisAng6
    * @return The axis and angle of rotation as [x, y, z, theta]
    */
   inline Eigen::Vector4d AxisAng3(const Eigen::Vector3d& expc3) {
-    Eigen::Vector4d v_ret;     
+    Eigen::Vector4d v_ret;
     float theta = expc3.norm();
     v_ret << expc3/theta, theta;
     //v_ret << Normalize(expc3)/theta, theta;
@@ -149,14 +149,14 @@ namespace Algebra {
   }
 
   /**
-   * Translates an exponential rotation into a rotation 
+   * Translates an exponential rotation into a rotation
    *           matrix using rodrigues formula.
    * @param so3mat exponenential representation of a rotation in so3 \f$[w]\theta\f$.
    * @return Rotation matrix \f$e^{[w]\theta}\f$.
    */
   inline Eigen::Matrix3d MatrixExp3(const Eigen::Matrix3d& so3mat) {
     Eigen::Vector3d omgtheta = so3ToVec(so3mat);
-    
+
     Eigen::Matrix3d m_ret = Eigen::Matrix3d::Identity();
     if (Epsilon(so3mat.norm())) {
       return m_ret;
@@ -167,10 +167,10 @@ namespace Algebra {
       //Rodrigues Formula.
       //how to write power using Eigen?
       return m_ret + std::sin(theta) * omgmat +
-        ((1 - std::cos(theta)) * (omgmat * omgmat)); 
+        ((1 - std::cos(theta)) * (omgmat * omgmat));
     }
   }
-  
+
   /**
    * Function: Computes the matrix logarithm of a rotation matrix
    * @param R Rotation matrix \f$[w]\theta\f$.
@@ -185,23 +185,24 @@ namespace Algebra {
     else if (acosinput <= -1) {
       Eigen::Vector3d omg;
       if (!Epsilon(1 + R(2, 2)))
-        omg = (1.0 / std::sqrt(2 * (1 + R(2, 2))))*Eigen::Vector3d(R(0, 2), R(1, 2), 1 + R(2, 2));
+        omg = (1.0 / std::sqrt(2 * (1 + R(2, 2))))*
+            Eigen::Vector3d(R(0, 2), R(1, 2), 1 + R(2, 2));
       else if (!Epsilon(1 + R(1, 1)))
-        omg = (1.0 / std::sqrt(2 * (1 + R(1, 1))))*Eigen::Vector3d(R(0, 1), 1 + R(1, 1), R(2, 1));
+        omg = (1.0 / std::sqrt(2 * (1 + R(1, 1))))*
+            Eigen::Vector3d(R(0, 1), 1 + R(1, 1), R(2, 1));
       else
-        omg = (1.0 / std::sqrt(2 * (1 + R(0, 0))))*Eigen::Vector3d(1 + R(0, 0), R(1, 0), R(2, 0));
+        omg = (1.0 / std::sqrt(2 * (1 + R(0, 0))))*
+            Eigen::Vector3d(1 + R(0, 0), R(1, 0), R(2, 0));
       m_ret = VecToso3(M_PI * omg);
-      //m_ret = VecToso3(theta * omg);
-      return  m_ret;
     }
     else {
-      m_ret = theta * (R - R.transpose())/(2.0*sin(theta));
-      return m_ret;
+        m_ret = theta / 2.0 / sin(theta) * (R.array() - R.transpose().array());;
     }
+    return  m_ret;
   }
-  
+
   /**
-   * Provides the adjoint representation of a transformation matrix Used to change the frame 
+   * Provides the adjoint representation of a transformation matrix Used to change the frame
    *           of reference for spatial velocity vectors
    * @param T 4x4 Transformation matrix SE(3) \f$\begin{vmatrix}R&p\\0&1\end{vmatrix}\f$.
    * @return 6x6 Adjoint Representation of the matrix T \f$adj(T)=\begin{vmatrix}R&0 \\ [p]R&R\end{vmatrix}\f$
@@ -215,7 +216,7 @@ namespace Algebra {
       VecToso3(R[1]) * R[0], R[0];
     return ad_ret;
   }
-  
+
   /**
    * Rotation expanded for screw axis
    * @param se3mat se3 matrix representation of exponential coordinates \f$[s]\theta\f$
@@ -226,9 +227,9 @@ namespace Algebra {
     // Extract the angular velocity vector from the transformation matrix
     Eigen::Matrix3d se3mat_cut = se3mat.block<3, 3>(0, 0);
     Eigen::Vector3d omgtheta = so3ToVec(se3mat_cut);
-    
+
     Eigen::MatrixXd m_ret(4, 4);
-    
+
     // If negligible rotation, m_Ret = [[Identity, angular velocty ]]
     //                                 [[0       , 1]]
     if (Epsilon(omgtheta.norm())) {
@@ -250,7 +251,7 @@ namespace Algebra {
         0, 0, 0, 1;
       return m_ret;
     }
-    
+
   }
   /**
    * Computes the matrix logarithm of a homogeneous transformation matrix
@@ -258,7 +259,7 @@ namespace Algebra {
    * @param T: A matrix in SE3.
    * @return The matrix logarithm of \f$e^{[s]\theta}\f$.
    */
-  inline Eigen::MatrixXd MatrixLog6(const Eigen::MatrixXd& T) {
+    inline Eigen::MatrixXd MatrixLog6(const Eigen::MatrixXd& T) {
     Eigen::MatrixXd m_ret(4, 4);
     auto rp = TransToRp(T);
     Eigen::Matrix3d omgmat = MatrixLog3(rp.at(0));
@@ -284,7 +285,7 @@ namespace Algebra {
     @return The inverse of T Uses the structure of transformation matrices to avoid taking a matrix inverse, for efficiency.
   */
   inline Eigen::MatrixXd TransInv(const Eigen::MatrixXd& transform) {
-    
+
     auto rp = TransToRp(transform);
     auto Rt = rp.at(0).transpose();
     auto t = -(Rt * rp.at(1));
@@ -295,7 +296,7 @@ namespace Algebra {
     inv(3, 3) = 1;
     return inv;
   }
-  /** 
+  /**
    *Inverts a rotation matrix
 
    @param R: A rotation matrix
@@ -308,7 +309,7 @@ namespace Algebra {
   /**
      Takes a parametric description of a screw axis and converts it to a
      normalized screw axis
-     
+
      @param q A point lying on the screw axis
      @param s A unit vector in the direction of the screw axis
      @param h The pitch of the screw axis
@@ -357,7 +358,7 @@ namespace Algebra {
 
   /**
      Returns a projection of mat into SE(3)
-     
+
      @param M A 4x4 matrix to project to SE(3)
      @return The closest matrix to T that is in SE(3)
      Projects a matrix mat to the closest matrix in SE(3) using singular-value
@@ -404,43 +405,39 @@ namespace Algebra {
     if (matR.determinant() > 0) {
       Eigen::Matrix4d m_ret;
       m_ret << matR.transpose()*matR, Eigen::Vector3d::Zero(3),
-        T.row(3);
+          T.row(3);
       m_ret = m_ret - Eigen::Matrix4d::Identity();
       return m_ret.norm();
     }
     else
-      return 1.0e9;
-  }
-  
-  inline bool TestIfSO3(const Eigen::Matrix3d& M) {
-    return std::abs(DistanceToSO3(M)) < 1e-3;
+        return 1.0e9;
   }
 
-  inline bool TestIfSE3(const Eigen::Matrix4d& T) {
-    return std::abs(DistanceToSE3(T)) < 1e-3;
-  }
+    inline bool TestIfSO3(const Eigen::Matrix3d& M) {
+        return std::abs(DistanceToSO3(M)) < 1e-3;
+    }
 
-  //TODO Reflect on this is calculat the derivative of the skew
-  // representation of V, or in other words:
-  // the derivative of ad_T(V)
-  // only used in InverseDynamics in kinetics.hpp
-  /**
-   * Calculate the 6x6 matrix of the given 
-   *           6-vector V
-   * @param V Eigen::VectorXd (6x1), V=[omg, v]
-   * @return Eigen::MatrixXd (6x6)
-   * Note: Can be used to calculate the Lie bracket [V1, V2] = 
-   *       [adV1]V2
-   */
-  inline Eigen::MatrixXd ad(Eigen::VectorXd V) {
-    Eigen::Matrix3d omgmat =
-      VecToso3(Eigen::Vector3d(V(0), V(1), V(2)));
-    Eigen::MatrixXd result(6, 6);
-    result.topLeftCorner<3, 3>() = omgmat;
-    result.topRightCorner<3, 3>() = Eigen::Matrix3d::Zero(3, 3);
-    result.bottomLeftCorner<3, 3>() =
-      VecToso3(Eigen::Vector3d(V(3), V(4), V(5)));
-    result.bottomRightCorner<3, 3>() = omgmat;
-    return result;
-  }
+    inline bool TestIfSE3(const Eigen::Matrix4d& T) {
+        return std::abs(DistanceToSE3(T)) < 1e-3;
+    }
+
+    /**
+     * Calculate the 6x6 matrix of the given
+     *           6-vector V
+     * @param V Eigen::VectorXd (6x1), V=[omg, v]
+     * @return Eigen::MatrixXd (6x6)
+     * Note: Can be used to calculate the Lie bracket [V1, V2] =
+     *       [adV1]V2
+     */
+    inline Eigen::MatrixXd ad(Eigen::VectorXd V) {
+        Eigen::Matrix3d omgmat =
+            VecToso3(Eigen::Vector3d(V(0), V(1), V(2)));
+        Eigen::MatrixXd result(6, 6);
+        result.topLeftCorner<3, 3>() = omgmat;
+        result.topRightCorner<3, 3>() = Eigen::Matrix3d::Zero(3, 3);
+        result.bottomLeftCorner<3, 3>() =
+            VecToso3(Eigen::Vector3d(V(3), V(4), V(5)));
+        result.bottomRightCorner<3, 3>() = omgmat;
+        return result;
+    }
 }
